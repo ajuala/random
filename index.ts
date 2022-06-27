@@ -37,6 +37,28 @@ function choice<T>(array: T[]) : T | null {
     return array.length == 0? null : array[randn(array.length)];
 }
 
+// choices(array, k=n) returns n number of (replaceable) elements from array
+function choices<T>(array: T[], k=0) : T[]| [] {
+    if (k <= 0 || array.length == 0) {
+	return [];
+    }
+    return new Array(k).fill(null).map(() => array[randn(array.length)]);
+}
+
+// shuffle(array) shuffles elements of array in place
+function shuffle<T>(arr: T[]) {
+    if (arr.length <= 1) {
+	return;
+    }
+
+    let n: number; // random index
+    for (let i = 0; i < arr.length; i++) {
+	n = randn(arr.length);
+	[arr[i], arr[n]] = [arr[n], arr[i]];
+    }
+}
+
+
 module.exports = {
     randn,
     range,
@@ -44,4 +66,6 @@ module.exports = {
     digits,
     hex,
     choice,
+    choices,
+    shuffle,
 }
