@@ -1,0 +1,28 @@
+{
+  "name": "random",
+  "version": "0.1.0",
+  "description": "Pseudorandom generators based on JavaScript Math.random()",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajuala/random.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "random",
+    "pseudorandom"
+  ],
+  "author": "Yon Anya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajuala/random/issues"
+  },
+  "homepage": "https://github.com/ajuala/random#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
